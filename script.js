@@ -9,8 +9,24 @@ The input will always be valid (numbers will be an array of length 2 or greater,
 target will always be the sum of two different items from that array).
 */
 
-function twoSum(numbers, target) {
-  numbers.forEach();
-}
+// function twoSum(numbers, target) {
+//   let answer;
+//   numbers
+//     .map((el) => target - el)
+//     .forEach((el, i) => {
+//       const e = numbers.findIndex((val) => val === el);
+//       if (i !== e) answer = [i, e];
+//     });
+//   return answer;
+// }
 
-twoSum([1, 2, 3], 4);
+function twoSum(numbers, target) {
+  let answer;
+  numbers.forEach((el, i) =>
+    numbers.includes(target - el) && i !== numbers.indexOf(target - el)
+      ? (answer = [i, numbers.indexOf(target - el)])
+      : 0
+  );
+  return answer;
+}
+console.log(twoSum([1, 2, 3], 4));
