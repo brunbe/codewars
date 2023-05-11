@@ -142,17 +142,16 @@ function calcPerm(string) {
   return perm;
 }
 
-const answer = new Array();
 function permutator(string) {
+  const numOfPerm = calcPerm(string);
+  const answer = new Array(numOfPerm).fill([]);
   const arr = [...string];
-  arr.forEach((el) =>
-    answer.push(
-      el + arr.filter((_, i) => i !== arr.indexOf(el)).forEach((el) => el)
-    )
-  );
+  for (let i = 0; i < numOfPerm; i++) {
+    answer[i].push;
+  }
 }
-console.log(permutator("a"));
-console.log(answer);
+console.log(calcPerm("abcd"));
+console.log(permutator("abcd"));
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
