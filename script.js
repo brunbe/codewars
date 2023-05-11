@@ -117,41 +117,95 @@ Your function should return ['aabb', 'abab', 'abba', 'baab', 'baba', 'bbaa']</li
 <p>Good luck!</p>`
 );
 
-function fac(num) {
-  if (num < 0) return -1;
-  else if (num === 0) return 1;
-  else {
-    return num * fac(num - 1);
+// function fac(num) {
+//   if (num < 0) return -1;
+//   else if (num === 0) return 1;
+//   else {
+//     return num * fac(num - 1);
+//   }
+// }
+
+// function calcUnique(string) {
+//   const obj = {};
+//   for (const el of [...string]) {
+//     obj[el] = (obj[el] || 0) + 1;
+//   }
+//   return [...Object.values(obj)];
+// }
+
+// function calcPerm(string) {
+//   const perm =
+//     fac(string.length) /
+//     calcUnique(string)
+//       .map((el) => fac(el))
+//       .reduce((acc, cur) => acc * cur, 1);
+//   return perm;
+// }
+// let o = 0;
+// function permute(nums) {
+//   let result = [];
+//   console.log(++o);
+//   console.log(`nums: ${nums}`);
+//   console.log(`numslength: ${nums.length}`);
+//   console.log(`result: ${result}`);
+
+//   if (nums.length === 0) return [];
+//   if (nums.length === 1) return [nums];
+
+//   for (let i = 0; i < nums.length; i++) {
+//     console.log(`i: ${i}`);
+//     const currentNum = nums[i];
+//     console.log(`currentNum: ${currentNum}`);
+//     const remainingNums = nums.slice(0, i).concat(nums.slice(i + 1));
+//     console.log(`remainingNums: ${remainingNums}`);
+//     const remainingNumsPermuted = permute(remainingNums);
+//     console.log(`remainingNumsPermuted: ${remainingNumsPermuted}`);
+//     console.log(`currentNum: ${currentNum}`);
+//     for (let j = 0; j < remainingNumsPermuted.length; j++) {
+//       console.log(`j : ${j}`);
+//       const permutedArray = [currentNum].concat(remainingNumsPermuted[j]);
+//       result.push(permutedArray);
+//       console.log(`permutedArray: ${permutedArray}`);
+//       console.dir(`result: ${result}`);
+//     }
+//   }
+//   return result;
+// }
+
+/*
+let n = 0;
+let o = 0;
+
+function permute(nums, result = [], arr = []) {
+  console.log(`start: ${++n}`);
+  console.log(`nums: ${nums}`);
+  console.log(`result: ${result}`);
+  console.log(`arr: ${arr}`);
+  //base case
+  if (nums.length === 0) {
+    console.log(`base: ${++o}`);
+    result.push([...arr]);
   }
+
+  for (let i = 0; i < nums.length; i++) {
+    let p = 0;
+    let q = 0;
+    console.log(`for:${++p}`);
+    let rest = nums.filter((n, index) => index !== i);
+    console.log(`rest: ${rest}`);
+    arr.push(nums[i]);
+    //recursiveness
+    permute(rest, result, arr);
+    arr.pop();
+    console.log(`after pop:${++q}`);
+    console.log(arr);
+  }
+  console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+  return result;
 }
 
-function calcUnique(string) {
-  const obj = {};
-  for (const el of [...string]) {
-    obj[el] = (obj[el] || 0) + 1;
-  }
-  return [...Object.values(obj)];
-}
-
-function calcPerm(string) {
-  const perm =
-    fac(string.length) /
-    calcUnique(string)
-      .map((el) => fac(el))
-      .reduce((acc, cur) => acc * cur, 1);
-  return perm;
-}
-
-function permutator(string) {
-  const numOfPerm = calcPerm(string);
-  const answer = new Array(numOfPerm).fill([]);
-  const arr = [...string];
-  for (let i = 0; i < numOfPerm; i++) {
-    answer[i].push;
-  }
-}
-console.log(calcPerm("abcd"));
-console.log(permutator("abcd"));
+console.log(permute(["a", "b", "c"]));
+*/
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
