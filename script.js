@@ -93,29 +93,29 @@ consecutive strings : follow one after another without an interruption
 //   )
 // );
 
-/*
-In this kata, your task is to create all permutations of a non-empty input string and remove duplicates, if present.
+document.querySelector("h2").insertAdjacentHTML(
+  "afterbegin",
+  `<p>In this kata, your task is to create all permutations of a non-empty input string and remove duplicates, if present create as many "shufflings" as you can!</p>
 
-Create as many "shufflings" as you can!
+<ul><p>Examples:</p>
 
-Examples:
+<li>With input 'a':
+Your function should return: ['a']</li>
 
-With input 'a':
-Your function should return: ['a']
+<li>With input 'ab':
+Your function should return ['ab', 'ba']</li>
 
-With input 'ab':
-Your function should return ['ab', 'ba']
+<li>With input 'abc':
+Your function should return ['abc','acb','bac','bca','cab','cba']</li>
 
-With input 'abc':
-Your function should return ['abc','acb','bac','bca','cab','cba']
+<li>With input 'aabb':
+Your function should return ['aabb', 'abab', 'abba', 'baab', 'baba', 'bbaa']</li></ul>
 
-With input 'aabb':
-Your function should return ['aabb', 'abab', 'abba', 'baab', 'baba', 'bbaa']
+<p>Note: The order of the permutations doesn't matter.</p>
 
-Note: The order of the permutations doesn't matter.
+<p>Good luck!</p>`
+);
 
-Good luck!
-*/
 function fac(num) {
   if (num < 0) return -1;
   else if (num === 0) return 1;
