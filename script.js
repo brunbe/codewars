@@ -94,28 +94,28 @@ consecutive strings : follow one after another without an interruption
 // );
 
 ///////////// Codewars - So many permutations ////////////////////////////////////////////////////////
-document.querySelector(".assignment").insertAdjacentHTML(
-  "afterbegin",
-  `<p>In this kata, your task is to create all permutations of a non-empty input string and remove duplicates, if present create as many "shufflings" as you can!</p>
+// document.querySelector(".assignment").insertAdjacentHTML(
+//   "afterbegin",
+//   `<p>In this kata, your task is to create all permutations of a non-empty input string and remove duplicates, if present create as many "shufflings" as you can!</p>
 
-<ul><p>Examples:</p>
+// <ul><p>Examples:</p>
 
-<li>With input 'a':
-Your function should return: ['a']</li>
+// <li>With input 'a':
+// Your function should return: ['a']</li>
 
-<li>With input 'ab':
-Your function should return ['ab', 'ba']</li>
+// <li>With input 'ab':
+// Your function should return ['ab', 'ba']</li>
 
-<li>With input 'abc':
-Your function should return ['abc','acb','bac','bca','cab','cba']</li>
+// <li>With input 'abc':
+// Your function should return ['abc','acb','bac','bca','cab','cba']</li>
 
-<li>With input 'aabb':
-Your function should return ['aabb', 'abab', 'abba', 'baab', 'baba', 'bbaa']</li></ul>
+// <li>With input 'aabb':
+// Your function should return ['aabb', 'abab', 'abba', 'baab', 'baba', 'bbaa']</li></ul>
 
-<p>Note: The order of the permutations doesn't matter.</p>
+// <p>Note: The order of the permutations doesn't matter.</p>
 
-<p>Good luck!</p>`
-);
+// <p>Good luck!</p>`
+// );
 
 // function fac(num) {
 //   if (num < 0) return -1;
@@ -321,9 +321,16 @@ onceFn(4, 6, 8); // undefined, fn was not called
 </ul>
 </div>`
 );
-
-const onceFn = function (...args) {
-  const once = function (...args) {
-    return ((a, b, c) => a + b + c)();
+function once(fn) {
+  let hasBeenCalled = false;
+  return function (...args) {
+    if (!hasBeenCalled) {
+      hasBeenCalled = true;
+      return fn(...args);
+    }
   };
-};
+}
+
+const onceFn = once((a, b) => a + b);
+console.log(onceFn(1, 2));
+console.log(onceFn(3, 3));
