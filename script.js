@@ -530,26 +530,26 @@ const sum = (a, b) => a + b;
 const fib = (n) => (n <= 1 ? 1 : fib(n - 1) + fib(n - 2));
 const factorial = (n) => (n < 1 ? 1 : factorial(n - 1) * n);
 
-function memoize(fn) {
-  const arr = [];
-  return function (...args) {
-    if (
-      !arr.some((obj) =>
-        obj.input.every((val, index) => val === [...args][index])
-      )
-    ) {
-      arr.push({ input: [...args], solution: fn(...args) });
-    }
-    let index = arr.findIndex((el) =>
-      el.input.every((val, index) => val === [...args][index])
-    );
-    // console.log(arr[0].input);
-    // console.log([...args]);
-    // console.log(index);
-    // console.log(arr);
-    return arr[index].solution;
-  };
-}
+// function memoize(fn) {
+//   const arr = [];
+//   return function (...args) {
+//     if (
+//       !arr.some((obj) =>
+//         obj.input.every((val, index) => val === [...args][index])
+//       )
+//     ) {
+//       arr.push({ input: [...args], solution: fn(...args) });
+//     }
+//     let index = arr.findIndex((el) =>
+//       el.input.every((val, index) => val === [...args][index])
+//     );
+//     // console.log(arr[0].input);
+//     // console.log([...args]);
+//     // console.log(index);
+//     // console.log(arr);
+//     return arr[index].solution;
+//   };
+// }
 
 function memoize(fn) {
   const cache = {};
@@ -559,7 +559,6 @@ function memoize(fn) {
       cache[key] = fn(...args);
       console.log("yeeha");
     }
-    console.log(cache);
     return cache[key];
   };
 }
