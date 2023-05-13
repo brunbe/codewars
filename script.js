@@ -336,42 +336,42 @@ function once(fn) {
 const onceFn = once((a, b) => a + b);
 console.log(onceFn(1, 2));
 console.log(onceFn(3, 3));
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-*/
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// */
 
-//////////////////////// codewars - Best travel ////////////////////////
-document.querySelector(".assignment").insertAdjacentHTML(
-  "afterbegin",
-  `<div class="markdown prose max-w-none mb-8" id="description"><p>John and Mary want to travel between a few towns A, B, C ... Mary has on a sheet of paper a list of distances between these towns.
-  <code>ls = [50, 55, 57, 58, 60]</code>.
-  John is tired of driving and he says to Mary that he doesn't want to drive more than <code>t = 174 miles</code> and he
-  will visit only <code>3</code> towns.</p>
-  <p>Which distances, hence which towns, they will choose so that the sum of the distances is the biggest possible to please Mary and John?</p>
-  <h4 id="example">Example:</h4>
-  <p>With list <code>ls</code> and 3 towns to visit they can make a choice between: 
-  <code>[50,55,57],[50,55,58],[50,55,60],[50,57,58],[50,57,60],[50,58,60],[55,57,58],[55,57,60],[55,58,60],[57,58,60]</code>.</p>
-  <p>The sums of distances are then:
-  <code>162, 163, 165, 165, 167, 168, 170, 172, 173, 175</code>.</p>
-  <p>The biggest possible sum taking a limit of <code>174</code> into account is then <code>173</code> and the distances of the <code>3</code> 
-  corresponding towns is <code>[55, 58, 60]</code>.</p>
-  <p>The function <code>chooseBestSum</code> (or <code>choose_best_sum</code> or ... depending on the language) will take as parameters <code>t</code> (maximum sum of distances, integer &gt;= 0), <code>k</code> (number of towns to visit, k &gt;= 1) 
-  and <code>ls</code> (list of distances, all distances are positive or zero integers and this list has at least one element).
-  The function returns the "best" sum ie the biggest possible sum of <code>k</code> distances less than or equal to the given limit <code>t</code>, if that sum exists,
-  or otherwise nil, null, None, Nothing, depending on the language. In that case with C, C++, D, Dart, Fortran, F#, Go, Julia, Kotlin, Nim, OCaml, Pascal, Perl, PowerShell, Reason, Rust, Scala, Shell, Swift return <code>-1</code>.</p>
-  <h4 id="examples">Examples:</h4>
-  <p><code>ts = [50, 55, 56, 57, 58]</code>
-  <code>choose_best_sum(163, 3, ts) -&gt; 163</code></p>
-  <p><code>xs = [50]</code>
-  <code>choose_best_sum(163, 3, xs) -&gt; nil (or null or ... or -1 (C++, C, D, Rust, Swift, Go, ...)</code></p>
-  <p><code>ys = [91, 74, 73, 85, 73, 81, 87]</code>
-  <code>choose_best_sum(230, 3, ys) -&gt; 228</code></p>
-  <h4 id="notes">Notes:</h4>
-  <ul>
-  <li>try not to modify the input list of distances <code>ls</code></li>
-  <li>in some languages this "list" is in fact a <em>string</em> (see the Sample Tests).</li>
-  </ul>
-  </div>`
-);
+// //////////////////////// codewars - Best travel ////////////////////////
+// document.querySelector(".assignment").insertAdjacentHTML(
+//   "afterbegin",
+//   `<div class="markdown prose max-w-none mb-8" id="description"><p>John and Mary want to travel between a few towns A, B, C ... Mary has on a sheet of paper a list of distances between these towns.
+//   <code>ls = [50, 55, 57, 58, 60]</code>.
+//   John is tired of driving and he says to Mary that he doesn't want to drive more than <code>t = 174 miles</code> and he
+//   will visit only <code>3</code> towns.</p>
+//   <p>Which distances, hence which towns, they will choose so that the sum of the distances is the biggest possible to please Mary and John?</p>
+//   <h4 id="example">Example:</h4>
+//   <p>With list <code>ls</code> and 3 towns to visit they can make a choice between:
+//   <code>[50,55,57],[50,55,58],[50,55,60],[50,57,58],[50,57,60],[50,58,60],[55,57,58],[55,57,60],[55,58,60],[57,58,60]</code>.</p>
+//   <p>The sums of distances are then:
+//   <code>162, 163, 165, 165, 167, 168, 170, 172, 173, 175</code>.</p>
+//   <p>The biggest possible sum taking a limit of <code>174</code> into account is then <code>173</code> and the distances of the <code>3</code>
+//   corresponding towns is <code>[55, 58, 60]</code>.</p>
+//   <p>The function <code>chooseBestSum</code> (or <code>choose_best_sum</code> or ... depending on the language) will take as parameters <code>t</code> (maximum sum of distances, integer &gt;= 0), <code>k</code> (number of towns to visit, k &gt;= 1)
+//   and <code>ls</code> (list of distances, all distances are positive or zero integers and this list has at least one element).
+//   The function returns the "best" sum ie the biggest possible sum of <code>k</code> distances less than or equal to the given limit <code>t</code>, if that sum exists,
+//   or otherwise nil, null, None, Nothing, depending on the language. In that case with C, C++, D, Dart, Fortran, F#, Go, Julia, Kotlin, Nim, OCaml, Pascal, Perl, PowerShell, Reason, Rust, Scala, Shell, Swift return <code>-1</code>.</p>
+//   <h4 id="examples">Examples:</h4>
+//   <p><code>ts = [50, 55, 56, 57, 58]</code>
+//   <code>choose_best_sum(163, 3, ts) -&gt; 163</code></p>
+//   <p><code>xs = [50]</code>
+//   <code>choose_best_sum(163, 3, xs) -&gt; nil (or null or ... or -1 (C++, C, D, Rust, Swift, Go, ...)</code></p>
+//   <p><code>ys = [91, 74, 73, 85, 73, 81, 87]</code>
+//   <code>choose_best_sum(230, 3, ys) -&gt; 228</code></p>
+//   <h4 id="notes">Notes:</h4>
+//   <ul>
+//   <li>try not to modify the input list of distances <code>ls</code></li>
+//   <li>in some languages this "list" is in fact a <em>string</em> (see the Sample Tests).</li>
+//   </ul>
+//   </div>`
+// );
 
 // function chooseBestSum(t, k, ls) {
 
@@ -408,35 +408,189 @@ document.querySelector(".assignment").insertAdjacentHTML(
 //   return res;
 // }
 
-// console.log(combinator([1, 2, 3], 2));
-const arr = [];
-const res = [];
+// // console.log(combinator([1, 2, 3], 2));
+// const arr = [];
+// const res = [];
 
-function recursion(args) {
-  if (arr.length === 3) {
-    res.push([...arr]);
-    return;
-  }
+// function recursion(args) {
+//   if (arr.length === 3) {
+//     res.push([...arr]);
+//     return;
+//   }
 
-  for (let i = 0; i < args.length; i++) {
-    arr.push(args[i]);
-    const rest = args.filter((_, index) => index > i);
-    recursion(rest);
-    arr.pop();
-  }
+//   for (let i = 0; i < args.length; i++) {
+//     arr.push(args[i]);
+//     const rest = args.filter((_, index) => index > i);
+//     recursion(rest);
+//     arr.pop();
+//   }
 
-  return res;
+//   return res;
+// }
+
+// const travelCalc = function (array) {
+//   const combinations = recursion(array);
+//   console.log(combinations);
+//   let longestRoute = [0, 0];
+//   const map = combinations.map((el) => el.reduce((acc, val) => acc + val, 0));
+//   map.forEach((el, i) =>
+//     el > longestRoute[0] && el < 174 ? (longestRoute = [el, i]) : null
+//   );
+//   return combinations[longestRoute[1]];
+// };
+
+// console.log(travelCalc([50, 55, 57, 58, 60]));
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////// leetcode 2623 Momoize ////////////////////////
+document.querySelector(".assignment").insertAdjacentHTML(
+  "afterbegin",
+  `<div><p>Given a function <code>fn</code>, return a&nbsp;<strong>memoized</strong>&nbsp;version of that function.</p>
+
+  <p>A&nbsp;<strong>memoized&nbsp;</strong>function is a function that will never be called twice with&nbsp;the same inputs. Instead it will return&nbsp;a cached value.</p>
+  
+  <p>You can assume there are&nbsp;<strong>3&nbsp;</strong>possible input functions:&nbsp;<code>sum</code><strong>, </strong><code>fib</code><strong>,&nbsp;</strong>and&nbsp;<code>factorial</code><strong>.</strong></p>
+  
+  <ul>
+    <li><code>sum</code><strong>&nbsp;</strong>accepts two integers&nbsp;<code>a</code> and <code>b</code> and returns <code>a + b</code>.</li>
+    <li><code>fib</code><strong>&nbsp;</strong>accepts a&nbsp;single integer&nbsp;<code>n</code> and&nbsp;returns&nbsp;<code>1</code> if <font face="monospace"><code>n &lt;= 1</code> </font>or<font face="monospace">&nbsp;<code>fib(n - 1) + fib(n - 2)</code>&nbsp;</font>otherwise.</li>
+    <li><code>factorial</code>&nbsp;accepts a single integer&nbsp;<code>n</code> and returns <code>1</code>&nbsp;if&nbsp;<code>n &lt;= 1</code>&nbsp;or&nbsp;<code>factorial(n - 1) * n</code>&nbsp;otherwise.</li>
+  </ul>
+  
+  <p>&nbsp;</p>
+  <p><strong class="example">Example 1:</strong></p>
+  
+  <pre><strong>Input</strong>
+  "sum"
+  ["call","call","getCallCount","call","getCallCount"]
+  [[2,2],[2,2],[],[1,2],[]]
+  <strong>Output</strong>
+  [4,4,1,3,2]
+  
+  <strong>Explanation</strong>
+  const sum = (a, b) =&gt; a + b;
+  const memoizedSum = memoize(sum);
+  memoizedSum(2, 2); // Returns 4. sum() was called as (2, 2) was not seen before.
+  memoizedSum(2, 2); // Returns 4. However sum() was not called because the same inputs were seen before.
+  // Total call count: 1
+  memoizedSum(1, 2); // Returns 3. sum() was called as (1, 2) was not seen before.
+  // Total call count: 2
+  </pre>
+  
+  <p><strong class="example">Example 2:</strong></p>
+  
+  <pre><strong>Input
+  </strong>"factorial"
+  ["call","call","call","getCallCount","call","getCallCount"]
+  [[2],[3],[2],[],[3],[]]
+  <strong>Output</strong>
+  [2,6,2,2,6,2]
+  
+  <strong>Explanation</strong>
+  const factorial = (n) =&gt; (n &lt;= 1) ? 1 : (n * factorial(n - 1));
+  const memoFactorial = memoize(factorial);
+  memoFactorial(2); // Returns 2.
+  memoFactorial(3); // Returns 6.
+  memoFactorial(2); // Returns 2. However factorial was not called because 2 was seen before.
+  // Total call count: 2
+  memoFactorial(3); // Returns 6. However factorial was not called because 3 was seen before.
+  // Total call count: 2
+  </pre>
+  
+  <p><strong class="example">Example 3:</strong></p>
+  
+  <pre><strong>Input
+  </strong>"fib"
+  ["call","getCallCount"]
+  [[5],[]]
+  <strong>Output</strong>
+  [8,1]
+  
+  <strong>Explanation
+  </strong>fib(5) = 8
+  // Total call count: 1
+  
+  </pre>
+  
+  <p>&nbsp;</p>
+  <p><strong>Constraints:</strong></p>
+  
+  <ul>
+    <li><code>0 &lt;= a, b &lt;= 10<sup>5</sup></code></li>
+    <li><code>1 &lt;= n &lt;= 10</code></li>
+    <li><code>at most 10<sup>5</sup>&nbsp;function calls</code></li>
+    <li><code>at most 10<sup>5</sup>&nbsp;attempts to access callCount</code></li>
+    <li><code>input function is sum, fib, or factorial</code></li>
+  </ul>
+  </div>`
+);
+
+const sum = (a, b) => a + b;
+const fib = (n) => (n <= 1 ? 1 : fib(n - 1) + fib(n - 2));
+const factorial = (n) => (n < 1 ? 1 : factorial(n - 1) * n);
+
+function memoize(fn) {
+  const arr = [];
+  return function (...args) {
+    if (
+      !arr.some((obj) =>
+        obj.input.every((val, index) => val === [...args][index])
+      )
+    ) {
+      arr.push({ input: [...args], solution: fn(...args) });
+    }
+    let index = arr.findIndex((el) =>
+      el.input.every((val, index) => val === [...args][index])
+    );
+    // console.log(arr[0].input);
+    // console.log([...args]);
+    // console.log(index);
+    // console.log(arr);
+    return arr[index].solution;
+  };
 }
 
-const travelCalc = function (array) {
-  const combinations = recursion(array);
-  console.log(combinations);
-  let longestRoute = [0, 0];
-  const map = combinations.map((el) => el.reduce((acc, val) => acc + val, 0));
-  map.forEach((el, i) =>
-    el > longestRoute[0] && el < 174 ? (longestRoute = [el, i]) : null
-  );
-  return combinations[longestRoute[1]];
-};
+function memoize(fn) {
+  const cache = {};
+  return function (...args) {
+    const key = JSON.stringify(args);
+    if (!(key in cache)) {
+      cache[key] = fn(...args);
+      console.log("yeeha");
+    }
+    console.log(cache);
+    return cache[key];
+  };
+}
 
-console.log(travelCalc([50, 55, 57, 58, 60]));
+const memoizedSum = memoize(sum);
+const memoizedFib = memoize(fib);
+const memoizedFactorial = memoize(factorial);
+
+console.log(memoizedSum(2, 6));
+console.log(memoizedSum(2, 5));
+console.log(memoizedSum(5, 2));
+console.log(memoizedSum(6, 2));
+console.log(memoizedSum(2, 2));
+console.log(memoizedSum(3, 3));
+console.log(memoizedSum(2, 6));
+console.log(memoizedSum(2, 2));
+
+console.log(memoizedFib(3));
+console.log(memoizedFib(4));
+console.log(memoizedFib(5));
+console.log(memoizedFib(6));
+console.log(memoizedFib(7));
+console.log(memoizedFib(8));
+console.log(memoizedFib(3));
+console.log(memoizedFib(5));
+
+console.log(memoizedFactorial(2));
+console.log(memoizedFactorial(3));
+console.log(memoizedFactorial(4));
+console.log(memoizedFactorial(5));
+console.log(memoizedFactorial(6));
+console.log(memoizedFactorial(7));
+console.log(memoizedFactorial(3));
+console.log(memoizedFactorial(5));
